@@ -127,7 +127,7 @@ Create `static/javascripts/profiles/services/profile.service.js` with the follow
     })();
 
 {x: profiles_factory}
-Create a new factory called `Profiles` in `static/javascripts/profiles/services/profiles.service.js`
+Create a new factory called `Profile` in `static/javascripts/profiles/services/profile.service.js`
 
 We aren't doing anything special here. Each of these API calls is a basic CRUD operation, so we get away with not having much code.
 
@@ -136,7 +136,7 @@ Add this file to `javascripts.html`:
     <script type="text/javascript" src="{% static 'javascripts/profiles/services/profile.service.js' %}"></script>
 
 {x: profiles_service_include_js}
-Include `profiles.service.js` in `javascripts.html`
+Include `profile.service.js` in `javascripts.html`
 
 ## Making an interface for user profiles
 Create `static/templates/profiles/profile.html` with the following content:
