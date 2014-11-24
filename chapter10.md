@@ -131,7 +131,7 @@ To get started, open `static/javascripts/profiles/controllers/profile-settings.c
       }
     })();
 
-{x profile_settings_controller}
+{x: profile_settings_controller}
 Create the `ProfileSettingsController` controller
 
 Be sure to include this file in `javascripts.html`:
@@ -258,36 +258,36 @@ As usual, now that we have the controller we need to make a corresponding templa
 Create `static/templates/profiles/settings.html` with the following content:
 
     <div class="col-md-4 col-md-offset-4">
-      <div class="well" ng-show="vm.account">
+      <div class="well" ng-show="vm.profile">
         <form role="form" class="settings" ng-submit="vm.update()">
           <div class="form-group">
             <label for="settings__email">Email</label>
-            <input type="text" class="form-control" id="settings__email" ng-model="vm.account.email" placeholder="ex. john@example.com" />
+            <input type="text" class="form-control" id="settings__email" ng-model="vm.profile.email" placeholder="ex. john@example.com" />
           </div>
 
           <div class="form-group">
             <label for="settings__password">New Password</label>
-            <input type="password" class="form-control" id="settings__password" ng-model="vm.account.password" placeholder="ex. notgoogleplus" />
+            <input type="password" class="form-control" id="settings__password" ng-model="vm.profile.password" placeholder="ex. notgoogleplus" />
           </div>
 
           <div class="form-group">
             <label for="settings__confirm-password">Confirm Password</label>
-            <input type="password" class="form-control" id="settings__confirm-password" ng-model="vm.account.confirm_password" placeholder="ex. notgoogleplus" />
+            <input type="password" class="form-control" id="settings__confirm-password" ng-model="vm.profile.confirm_password" placeholder="ex. notgoogleplus" />
           </div>
 
           <div class="form-group">
             <label for="settings__username">Username</label>
-            <input type="text" class="form-control" id="settings__username" ng-model="vm.account.username" placeholder="ex. notgoogleplus" />
+            <input type="text" class="form-control" id="settings__username" ng-model="vm.profile.username" placeholder="ex. notgoogleplus" />
           </div>
 
           <div class="form-group">
             <label for="settings__tagline">Tagline</label>
-            <textarea class="form-control" id="settings__tagline" ng-model="vm.account.tagline" placeholder="ex. This is Not Google Plus." />
+            <textarea class="form-control" id="settings__tagline" ng-model="vm.profile.tagline" placeholder="ex. This is Not Google Plus." />
           </div>
 
           <div class="form-group">
             <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-danger pull-right" ng-click="vm.account.destroy()">Delete Account</button>
+            <button type="button" class="btn btn-danger pull-right" ng-click="vm.profile.destroy()">Delete Account</button>
           </div>
         </form>
       </div>
@@ -310,7 +310,7 @@ Open up `static/javascripts/thinkster.routes.js` and add the following route:
     // ...
 
 ## Checkpoint
-And that's our last feature! You should not be able to load up the settings page at `http://localhost:8000/+:username/settings` and update your settings as you wish.
+And that's our last feature! You should now be able to load up the settings page at `http://localhost:8000/+:username/settings` and update your settings as you wish.
 
 Try updating your tagline. If it works, you will now see your tagline displayed on your profile page.
 

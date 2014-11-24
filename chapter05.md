@@ -139,9 +139,9 @@ Create a file in `static/javascripts/layout/controllers/` called `navbar.control
 {x: angularjs_navbar_controller}
 Create a `NavbarController` in `static/javascripts/layout/controllers/navbar.controller.js`
 
-Open `templates/navbar.html` and add an `mg-controller` directive with the value `NavbarController` to the `<nav />` tag like so:
+Open `templates/navbar.html` and add an `ng-controller` directive with the value `NavbarController as vm` to the `<nav />` tag like so:
 
-    <nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController">
+    <nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController as vm">
 
 While you have `templates/navbar.html` open, go ahead and find the logout link and add `ng-click="vm.logout()"` to it like so:
 

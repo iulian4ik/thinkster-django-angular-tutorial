@@ -129,8 +129,8 @@ By now we should have no problem seeing the serialized JSON of an `Account` obje
     >>> from authentication.serializers import AccountSerializer
     >>> account = Account.objects.latest('created_at')
     >>> serialized_account = AccountSerializer(account)
-    >>> serialized_account.email
-    >>> serialized_account.username
+    >>> serialized_account.data.get('email')
+    >>> serialized_account.data.get('username')
 
 {x: checkpoint_auth_serializers}
 Make sure your `AccountSerializer` serializer is working

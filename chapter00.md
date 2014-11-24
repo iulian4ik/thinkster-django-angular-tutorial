@@ -78,13 +78,6 @@ You can find the boilerplate project on Github at [brwr/thinkster-django-angular
 <div>
   <strong>Note</strong>
   <div class="brewer-note">
-    <p>The boilerplate project requires PostgreSQL to be installed. You can download PostgreSQL [here](http://www.postgresql.org/download/).</p>
-  </div>
-</div>
-
-<div>
-  <strong>Note</strong>
-  <div class="brewer-note">
     <p>If you are interested in a detailed appendix on setting up your environemnt, reach out to [@jamesbrewer](http://twitter.com/jamesbrwr) on Twitter.</p>
   </div>
 </div>

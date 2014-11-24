@@ -3,7 +3,7 @@ During this tutorial you accomplished a lot.
 
 For starters, you build an entire authentication system by yourself! You extended Django's built-in `User` model and added various attributes and did so in a way that makes adding other information an easy feat when it becomes necessary. You went on to built both the front and back ends for registration, logging in, logging out, and updating the user's profile.
 
-In addition to building the authentication system you also create a way for users to post their thoughts to our application and view other users' posts.
+In addition to building the authentication system you also create a way for users to add their posts to our application and view other users' posts.
 
 This is the stuff that we do as engineers of the web. There will be times when you will need skills learned outside this tutorial and there are certainly best practices that we did not touch on, but what you've done here is the gist of web development!
 
@@ -17,4 +17,4 @@ Before you go, I want to give a shoutout to all of the people who were kind enou
 
 Here is a full list of contributors who helped with the current release:
 
-Albert Pai, Christophe Blefari, Diego Martinez, Eric Simons, Ernest Ezis, James Brewer, Martin Hill, Matt Greene, Ronald Paloschi, Seth Clossman, Vladimir Vitvitskiy, Zach Reinhardt
+Albert Pai, Christophe Blefari, Diego Martinez, Eric Simons, Ernest Ezis, Iulian Gulea, James Brewer, Lorenzo Cinque, Martin Hill, Martin Oosthuizen, Matt Greene, Ronald Paloschi, Seth Clossman, Vladimir Vitvitskiy, Zach Reinhardt

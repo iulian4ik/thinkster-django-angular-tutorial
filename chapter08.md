@@ -21,6 +21,12 @@ Open `static/stylesheets/styles.css` and add this rule to the bottom of the file
       right: 20px;
     }
 
+{x: new_post_modal_button}
+Add a button for showing the new post modal
+
+{x: style_new_post_button}
+Style the new post button
+
 ## An interface for submitting new posts
 Now we need to create the form the user will type their new post into. Open `static/templates/posts/new-post.html` and add the following to the bottom of the file:
 
@@ -41,6 +47,9 @@ Now we need to create the form the user will type their new post into. Open `sta
         </button>
       </div>
     </form>
+
+{x: new_post_template}
+Make a template for adding new posts in `static/templates/posts/new-post.html`
 
 ## Controlling the new post interface with NewPostController
 Create `static/javascripts/posts/controller/new-post.controller.js` with the following content:
@@ -105,6 +114,9 @@ Create `static/javascripts/posts/controller/new-post.controller.js` with the fol
       }
     })();
 
+{x: new_post_controller}
+Make a `NewPostController` in `static/javascripts/posts/controllers/new-post.controller.js`
+
 There are a few things going on here that we should talk about.
 
     $rootScope.$broadcast('post.created', {
@@ -139,6 +151,13 @@ If the error callback is triggered, then we will broadcast a new event: `post.cr
     $scope.closeThisDialog();
 
 This is a method provided by `ngDialog`. All it does is close the model we have open. It's also worth nothing that `closeThisDialog()` is not stored on the ViewModel, so we must call `$scope.closeThisDialog()` instead of `vm.closeThisDialog()`.
+
+Be sure to include `new-post.controller.js` in `javascripts.html`:
+
+    <script type="text/javascript" src="{% static 'javascripts/posts/controllers/new-post.controller.js' %}"></script>
+
+{x: js_include_new_post}
+Include `new-post.controller.js` in `javascripts.html`
 
 ## Checkpoint
 Visit `http://localhost:8000/` and click the + button in the bottom-right corner. Fill out this form to create a new post. You will know everything worked because the new post will be displayed at the top of the page.

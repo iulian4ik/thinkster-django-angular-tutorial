@@ -151,7 +151,7 @@ Do these views look similar? They aren't that different than the ones we made to
 
 `pre_save` is called before the model of this view is saved.
 
-When a `Post` object is created it has to be associated with an author. Making the author type in their own username or id when creating adding a thought to the site would be a bad experience, so we handle this association for them with the `pre_save` hook. We simply grab the user associated with this request and make them the author of this `Post`.
+When a `Post` object is created it has to be associated with an author. Making the author type in their own username or id when creating adding a post to the site would be a bad experience, so we handle this association for them with the `pre_save` hook. We simply grab the user associated with this request and make them the author of this `Post`.
 
     def get_permissions(self):
         if self.request.method in permissions.SAFE_METHODS:

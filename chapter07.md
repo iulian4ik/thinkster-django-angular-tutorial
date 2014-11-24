@@ -1,5 +1,5 @@
 # Rendering Post objects
-Until now, the index page has been empty. Now that we have handled authentication and the backend details for the `Postt` model, it's time to give our users something to interact with. We will do this by creating a service that handles retrieving and creating `Postt`s and some controllers and directives for handling how the data is displayed.
+Until now, the index page has been empty. Now that we have handled authentication and the backend details for the `Post` model, it's time to give our users something to interact with. We will do this by creating a service that handles retrieving and creating `Post`s and some controllers and directives for handling how the data is displayed.
 
 ## A module for posts
 Let's define the posts modules.
@@ -310,7 +310,7 @@ Create a file in `static/javascripts/layout/controllers/` called `index.controll
 
           /**
           * @name postsSuccessFn
-          * @desc Update thoughts array on view
+          * @desc Update posts array on view
           */
           function postsSuccessFn(data, status, headers, config) {
             vm.posts = data.data;
@@ -344,7 +344,7 @@ Let's touch on a couple of things here.
       vm.posts.unshift(post);
     });
 
-Later, when we get around to creating a new post, we will fire off an event called `post.created` when the user creates a post. By catching this event here, we can add this new thought to the front of the `vm.posts` array. This will prevent us from having to make an extra API request to the server for updated data. We will talk about this more shortly, but for now you should know that we do this to increase the *perceived* performance of our application.
+Later, when we get around to creating a new post, we will fire off an event called `post.created` when the user creates a post. By catching this event here, we can add this new post to the front of the `vm.posts` array. This will prevent us from having to make an extra API request to the server for updated data. We will talk about this more shortly, but for now you should know that we do this to increase the *perceived* performance of our application.
 
     $scope.$on('post.created.error', function () {
       vm.posts.shift();
@@ -416,7 +416,7 @@ Include `posts.directive.js` in `javascripts.html`
 There are two parts of the directives API that I want to touch on: `scope` and `restrict`.
 
     scope: {
-      thoughts: '='
+      posts: '='
     },
 
 `scope` defines the scope of this directive, similar to how `$scope` works for controllers. The difference is that, in a controller, a new scope is implicitly created. For a directive, we have the option of explicitly defining our scopes and that's what we do here.
@@ -600,7 +600,7 @@ A few things worth noting:
 
 1. We use the `ng-cloak` directive to prevent flashing since this directive will be used on the first page loaded.
 2. We will need to create a `post` directive for rendering each individual post.
-3. If no thoughts are present, we render a message informing the user.
+3. If no posts are present, we render a message informing the user.
 
 ## Making a directive for displaying a single Post
 In the template for the posts directive, we use another directive called `post`. Let's create that.

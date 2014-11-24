@@ -52,7 +52,7 @@ Let's step through this snippet line-by-line:
 
     class AccountViewSet(viewsets.ModelViewSet):
 
-Django REST Framework offers a feature called viewsets. A viewset, as the name implies, is a set a views. Specifically, the `ModelViewSet` offers an interface for listing, creating, retrieving, updating and destroying objects of a given model.
+Django REST Framework offers a feature called viewsets. A viewset, as the name implies, is a set of views. Specifically, the `ModelViewSet` offers an interface for listing, creating, retrieving, updating and destroying objects of a given model.
 
     lookup_field = 'username'
     queryset = Account.objects.all()
@@ -227,7 +227,7 @@ Here we define the factory we just registered. We inject the `$cookies` and `$ht
 
 This is personal preference, but I find it's more readable to define your service as a named object and then return it, leaving the details lower in the file. 
 
-    register: function (username, password, email) {
+    function register (username, password, email) {
 
 At this point, the `Authentication` service has only one method: `register`, which takes a `username`, `password`, and `email`. We will add more methods to the service as we move forward.
  
